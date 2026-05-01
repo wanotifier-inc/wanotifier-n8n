@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"description": "n8n community node for WANotifier — WhatsApp marketing automation built on the official WhatsApp API. Create or update contacts, send free-form messages during an active conversation window, and fire transactional notifications using pre-configured message templates.",
 	"license": "MIT",
-	"homepage": "https://github.com/wanotifier/n8n-nodes-wanotifier",
+	"homepage": "https://github.com/wanotifier-inc/wanotifier-n8n",
 	"keywords": [
 		"n8n-community-node-package",
 		"n8n",
@@ -29,7 +29,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/wanotifier/n8n-nodes-wanotifier.git"
+		"url": "https://github.com/wanotifier-inc/wanotifier-n8n.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",

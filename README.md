@@ -56,3 +56,4 @@ Tested against n8n 1.94.0+. Built with `@n8n/node-cli`.
 ## License
 
 [MIT](LICENSE.md)
+
