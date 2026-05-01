@@ -175,7 +175,7 @@ export const messageProperties: INodeProperties[] = [
 
 	// ─── Send Location ─────────────────────────────────────────
 	{
-		displayName: 'Latitude',
+		displayName: 'Location Latitude',
 		name: 'latitude',
 		type: 'number',
 		required: true,
@@ -184,7 +184,7 @@ export const messageProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['message'], operation: ['sendLocation'] } },
 	},
 	{
-		displayName: 'Longitude',
+		displayName: 'Location Longitude',
 		name: 'longitude',
 		type: 'number',
 		required: true,
@@ -193,7 +193,7 @@ export const messageProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['message'], operation: ['sendLocation'] } },
 	},
 	{
-		displayName: 'Place Name',
+		displayName: 'Location Name',
 		name: 'placeName',
 		type: 'string',
 		required: true,
@@ -201,7 +201,7 @@ export const messageProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['message'], operation: ['sendLocation'] } },
 	},
 	{
-		displayName: 'Address',
+		displayName: 'Location Address',
 		name: 'address',
 		type: 'string',
 		required: true,

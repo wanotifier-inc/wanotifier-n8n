@@ -9,11 +9,11 @@ export const messageTemplateProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['messageTemplate'] } },
 		options: [
 			{
-				name: 'Send Message Template',
+				name: 'Send Message Template (Via a Notification)',
 				value: 'send',
 				description:
-					'Send a templated WhatsApp message via a pre-configured transactional notification',
-				action: 'Send a message template',
+					'Send message template from a pre-configured transactional notification',
+				action: 'Send a message template via a notification',
 			},
 		],
 		default: 'send',
@@ -44,7 +44,7 @@ export const messageTemplateProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['messageTemplate'], operation: ['send'] } },
 	},
 	{
-		displayName: 'Notification Name or ID',
+		displayName: 'Transactional Notification Name or ID',
 		name: 'notificationKey',
 		type: 'options',
 		required: true,
@@ -55,7 +55,7 @@ export const messageTemplateProperties: INodeProperties[] = [
 		displayOptions: { show: { resource: ['messageTemplate'], operation: ['send'] } },
 	},
 	{
-		displayName: 'Template Variables',
+		displayName: 'Message Template Variable Data',
 		name: 'templateVariables',
 		type: 'resourceMapper',
 		default: { mappingMode: 'defineBelow', value: null },
@@ -66,6 +66,7 @@ export const messageTemplateProperties: INodeProperties[] = [
 			resourceMapper: {
 				resourceMapperMethod: 'getNotificationVariables',
 				mode: 'add',
+				valuesLabel: 'Message Template Variable Data',
 				fieldWords: { singular: 'variable', plural: 'variables' },
 				addAllFields: true,
 				multiKeyMatch: false,

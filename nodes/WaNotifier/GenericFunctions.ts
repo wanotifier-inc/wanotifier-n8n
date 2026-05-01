@@ -139,11 +139,11 @@ export async function loadNotificationVariables(
 	}
 
 	const fields: ResourceMapperField[] = variables.map(({ key, label }) => {
-		const { label: cleanLabel, required } = parseRequiredSuffix(label ?? key);
+		const { label: cleanLabel } = parseRequiredSuffix(label ?? key);
 		return {
 			id: key,
 			displayName: cleanLabel || titleCase(key),
-			required,
+			required: true,
 			defaultMatch: false,
 			display: true,
 			type: 'string',

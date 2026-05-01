@@ -221,23 +221,10 @@ export class WaNotifier implements INodeType {
 						| undefined;
 					const mapped = (mapping?.value ?? {}) as IDataObject;
 
-					const ARRAY_GROUPS = ['body_variables', 'button_variables'];
 					const data: IDataObject = {};
-					const groups: Record<string, Array<{ idx: number; value: unknown }>> = {};
-
 					for (const [k, v] of Object.entries(mapped)) {
 						if (v === '' || v === null || v === undefined) continue;
-						const group = ARRAY_GROUPS.find((g) => new RegExp(`^${g}_(\\d+)$`).test(k));
-						if (group) {
-							const idx = Number(k.slice(group.length + 1));
-							(groups[group] ??= []).push({ idx, value: v });
-						} else {
-							data[k] = v as IDataObject[keyof IDataObject];
-						}
-					}
-					for (const [name, entries] of Object.entries(groups)) {
-						entries.sort((a, b) => a.idx - b.idx);
-						data[name] = entries.map((e) => e.value);
+						data[k] = v as IDataObject[keyof IDataObject];
 					}
 
 					response = (await waRequest.call(
