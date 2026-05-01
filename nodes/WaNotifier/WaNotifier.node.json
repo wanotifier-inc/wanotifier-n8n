@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.waNotifier",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Communication", "Marketing"],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://help.wanotifier.com/en/article/wanotifier-api/"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://help.wanotifier.com/en/article/wanotifier-api/"
+			}
+		]
+	}
+}
