@@ -1,4 +1,5 @@
 import {
+	NodeApiError,
 	NodeConnectionTypes,
 	NodeOperationError,
 	type IDataObject,
@@ -6,6 +7,7 @@ import {
 	type INodeExecutionData,
 	type INodeType,
 	type INodeTypeDescription,
+	type JsonObject,
 } from 'n8n-workflow';
 
 import { contactProperties } from './ContactDescription';
@@ -52,13 +54,6 @@ export class WaNotifier implements INodeType {
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [{ name: 'waNotifierApi', required: true }],
-		requestDefaults: {
-			baseURL: 'https://app.wanotifier.com/api/v1',
-			headers: {
-				Accept: 'application/json',
-				'Content-Type': 'application/json',
-			},
-		},
 		properties: [
 			{
 				displayName: 'Resource',
@@ -246,14 +241,19 @@ export class WaNotifier implements INodeType {
 					...responseArray.map((json) => ({ json, pairedItem: { item: i } })),
 				);
 			} catch (error) {
+				const wrapped =
+					error instanceof NodeApiError || error instanceof NodeOperationError
+						? error
+						: new NodeApiError(this.getNode(), error as JsonObject, { itemIndex: i });
+
 				if (this.continueOnFail()) {
 					returnData.push({
-						json: { error: (error as Error).message },
+						json: { error: wrapped.message },
 						pairedItem: { item: i },
 					});
 					continue;
 				}
-				throw error;
+				throw wrapped;
 			}
 		}
 
