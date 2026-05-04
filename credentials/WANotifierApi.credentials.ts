@@ -6,14 +6,14 @@ import type {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class WaNotifierApi implements ICredentialType {
-	name = 'waNotifierApi';
+export class WANotifierApi implements ICredentialType {
+	name = 'wANotifierApi';
 
 	displayName = 'WANotifier API';
 
 	icon: Icon = {
-		light: 'file:../nodes/WaNotifier/wanotifier.svg',
-		dark: 'file:../nodes/WaNotifier/wanotifier.dark.svg',
+		light: 'file:../nodes/WANotifier/wanotifier.svg',
+		dark: 'file:../nodes/WANotifier/wanotifier.dark.svg',
 	};
 
 	documentationUrl = 'https://help.wanotifier.com/en/article/wanotifier-api/';

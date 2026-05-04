@@ -40,10 +40,10 @@ interface MappedTemplateVariables {
 	value?: IDataObject | null;
 }
 
-export class WaNotifier implements INodeType {
+export class WANotifier implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'WANotifier',
-		name: 'waNotifier',
+		name: 'wANotifier',
 		icon: { light: 'file:wanotifier.svg', dark: 'file:wanotifier.dark.svg' },
 		group: ['output'],
 		version: 1,
@@ -53,7 +53,7 @@ export class WaNotifier implements INodeType {
 		usableAsTool: true,
 		inputs: [NodeConnectionTypes.Main],
 		outputs: [NodeConnectionTypes.Main],
-		credentials: [{ name: 'waNotifierApi', required: true }],
+		credentials: [{ name: 'wANotifierApi', required: true }],
 		properties: [
 			{
 				displayName: 'Resource',

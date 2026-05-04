@@ -40,7 +40,7 @@ export async function waRequest(
 
 	return (await this.helpers.httpRequestWithAuthentication.call(
 		this,
-		'waNotifierApi',
+		'wANotifierApi',
 		options,
 	)) as IDataObject | IDataObject[];
 }
