@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-wanotifier",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "n8n community node for WANotifier — WhatsApp marketing automation built on the official WhatsApp API. Create or update contacts, send free-form messages during an active conversation window, and fire transactional notifications using pre-configured message templates.",
 	"license": "MIT",
 	"homepage": "https://github.com/wanotifier-inc/wanotifier-n8n",

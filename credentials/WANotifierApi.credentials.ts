@@ -16,7 +16,7 @@ export class WANotifierApi implements ICredentialType {
 		dark: 'file:../nodes/WANotifier/wanotifier.dark.svg',
 	};
 
-	documentationUrl = 'https://help.wanotifier.com/en/article/wanotifier-api/';
+	documentationUrl = 'https://help.wanotifier.com/en/article/how-to-integrate-wanotifier-with-500-apps-using-n8n-1wb9ic3/';
 
 	properties: INodeProperties[] = [
 		{

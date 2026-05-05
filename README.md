@@ -50,7 +50,7 @@ Tested against n8n 1.94.0+. Built with `@n8n/node-cli`.
 ## Resources
 
 - [WANotifier](https://wanotifier.com)
-- [WANotifier API documentation](https://help.wanotifier.com/en/article/wanotifier-api/)
+- [WANotifier × n8n setup guide](https://help.wanotifier.com/en/article/how-to-integrate-wanotifier-with-500-apps-using-n8n-1wb9ic3/)
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 
 ## License

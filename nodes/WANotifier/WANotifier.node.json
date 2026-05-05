@@ -6,12 +6,12 @@
 	"resources": {
 		"primaryDocumentation": [
 			{
-				"url": "https://help.wanotifier.com/en/article/wanotifier-api/"
+				"url": "https://help.wanotifier.com/en/article/how-to-integrate-wanotifier-with-500-apps-using-n8n-1wb9ic3/"
 			}
 		],
 		"credentialDocumentation": [
 			{
-				"url": "https://help.wanotifier.com/en/article/wanotifier-api/"
+				"url": "https://help.wanotifier.com/en/article/how-to-integrate-wanotifier-with-500-apps-using-n8n-1wb9ic3/"
 			}
 		]
 	}
